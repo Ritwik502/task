@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ArgumentSelect = (prop) => {
     const indata=prop.arg;
-    const [boolret, setBoolret] = useState();
-    // console.log(typeof indata);
+    // const [boolret, setBoolret] = useState();
     const handleChange = (e) =>{
-
-        // console.log(indata[e.target.value].boolVal);
-        // setBoolret(e.target.value.boolVal);
-        // console.log(boolret);
-        setBoolret(indata[e.target.value].boolVal);
+        // setBoolret(indata[e.target.value].boolVal);
         prop.callb(indata[e.target.value].boolVal);
     };
     return ( 
