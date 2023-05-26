@@ -6,6 +6,8 @@ import ArgumentSelect from "./ArgumentSelect"
 function App() {
   const [data, setData] = useState([{ vname: "", boolVal: true }]);
   const [operation, setOperation] = useState("");
+
+  const [resultBool, setResultBool] = useState();
   const handleClick = () => {
     setData([...data, { vname: "", boolVal: true }]);
   };
@@ -25,6 +27,10 @@ function App() {
     const deleteVal = [...data];
     deleteVal.splice(i, 1);
     setData(deleteVal);
+  };
+  const calc = (bbval) =>{
+    console.log(bbval)
+    setResultBool(bbval);
   };
   return (
     <div className="App">
@@ -63,11 +69,14 @@ function App() {
           </select>
           <button>X</button>
         </div>
-        {operation==="constant"? <ConstantSelect  arg={data}/>:""}
+        {operation==="constant"? <ConstantSelect  arg={data} callb={calc} />:""}
         {operation==="argument"? <ArgumentSelect/>:""}
         {operation==="and"? <AndSelect/>:""}
         {operation==="or"? <OrSelect/>:""}
       </div>
+      <p>result : 
+      {JSON.stringify(resultBool)}
+      </p>
       <p>{JSON.stringify(data)}</p>
     </div>
   );
