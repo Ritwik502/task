@@ -19,7 +19,7 @@ function App() {
   };
   const handleChangeOp = (e) => {
     setOperation(e.target.value);
-    console.log(operation);
+    // console.log(operation);
   };
   const handleDelete = (i) => {
     const deleteVal = [...data];
@@ -63,7 +63,7 @@ function App() {
           </select>
           <button>X</button>
         </div>
-        {operation==="constant"? <ConstantSelect/>:""}
+        {operation==="constant"? <ConstantSelect  arg={data}/>:""}
         {operation==="argument"? <ArgumentSelect/>:""}
         {operation==="and"? <AndSelect/>:""}
         {operation==="or"? <OrSelect/>:""}
