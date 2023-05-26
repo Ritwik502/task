@@ -1,29 +1,21 @@
-import React, { useState } from "react";
-
 const ConstantSelect = (prop) => {
-    const indata=prop.arg;
-    const [boolret, setBoolret] = useState();
-    // console.log(typeof indata);
-    const handleChange = (e) =>{
 
-        // console.log(indata[e.target.value].boolVal);
-        // setBoolret(e.target.value.boolVal);
-        // console.log(boolret);
-        setBoolret(indata[e.target.value].boolVal);
-        prop.callb(indata[e.target.value].boolVal);
-    }
-    return ( 
+    const handleChange = (e) =>{
+        console.log(e.target.value==="true");
+        prop.callb(e.target.value==="true");
+    };
+    return (
         <div>
         <p>constant is chosen</p>
         <select
-        name= "argsel"
-        onChange={(e) => handleChange(e)}
-        >
-        {indata.map((val, i) => (
-                <option value={i}>{val.vname}</option>
-        ))}
-            </select>
-        </div>
-     );
+            name="boolVal"
+            onChange={(e) => handleChange(e)}
+          >
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+          </div>
+      );
 }
+ 
 export default ConstantSelect;

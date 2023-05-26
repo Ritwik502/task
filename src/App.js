@@ -69,8 +69,8 @@ function App() {
           </select>
           <button>X</button>
         </div>
-        {operation==="constant"? <ConstantSelect  arg={data} callb={calc} />:""}
-        {operation==="argument"? <ArgumentSelect/>:""}
+        {operation==="constant"? <ConstantSelect callb={calc} />:""}
+        {operation==="argument"? <ArgumentSelect  arg={data} callb={calc} />:""}
         {operation==="and"? <AndSelect/>:""}
         {operation==="or"? <OrSelect/>:""}
       </div>
