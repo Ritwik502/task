@@ -14,7 +14,7 @@ const ArgumentSelect = (prop) => {
     };
     return ( 
         <div>
-        <p>constant is chosen</p>
+        {/* <p>constant is chosen</p> */}
         <select
         name= "argsel"
         onChange={(e) => handleChange(e)}

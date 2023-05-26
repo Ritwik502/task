@@ -77,7 +77,7 @@ function App() {
       <p>result : 
       {JSON.stringify(resultBool)}
       </p>
-      <p>{JSON.stringify(data)}</p>
+      {/* <p>{JSON.stringify(data)}</p> */}
     </div>
   );
 }

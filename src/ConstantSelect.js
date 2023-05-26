@@ -6,7 +6,7 @@ const ConstantSelect = (prop) => {
     };
     return (
         <div>
-        <p>constant is chosen</p>
+        {/* <p>constant is chosen</p> */}
         <select
             name="boolVal"
             onChange={(e) => handleChange(e)}
