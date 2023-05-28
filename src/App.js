@@ -71,8 +71,8 @@ function App() {
         </div>
         {operation==="constant"? <ConstantSelect callb={calc} />:""}
         {operation==="argument"? <ArgumentSelect  arg={data} callb={calc} />:""}
-        {operation==="and"? <AndSelect/>:""}
-        {operation==="or"? <OrSelect/>:""}
+        {operation==="and"? <AndSelect  arg={data} callb={calc} />:""}
+        {operation==="or"? <OrSelect arg={data} callb={calc}/>:""}
       </div>
       <p>result : 
       {JSON.stringify(resultBool)}
